@@ -89,7 +89,7 @@
 .ex-9-img:hover {
     filter: grayscale(70%);
     border-radius: 25px;
-    scale: 1.5 1.5;
+    transform: scale(1.5,1.5);
 }
 
 /* esercizio 10 */
@@ -103,9 +103,142 @@
 
 @keyframes rotate {
     0% {
-        rotate: 0deg;
+        transform: rotate(0deg);
     }
     100%{
-        rotate: 360deg;
+        transform: rotate(360deg);
+    }
+}
+
+/* esercizio 11 */
+
+.ex-11-icon:hover {
+    animation-name: rotate270;
+    animation-duration: 2s;
+}
+
+@keyframes rotate270 {
+    0% {
+        transform: rotate(0deg);
+    }
+    95% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* esercizio 12 */
+
+.ex-12-button:hover {
+    text-decoration: underline;
+}
+
+.ex-12-button:hover .ex-12-top-white {
+    animation-name: move-top-12;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+@keyframes move-top-12 {
+    0% {
+        left: 10%;
+    }
+    50% {
+        left: calc(100% - 60px);
+    }
+    100% {
+        left: 10%;
+    }
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation-name: move-bottom-12;
+    animation-duration: 2s; 
+    animation-timing-function: linear;
+}
+
+@keyframes move-bottom-12 {
+    0% {
+        right: 20%;
+    }
+    50% {
+        right: calc(100% - 60px);
+    }
+    100% {
+        right: 20%;
+    }
+}
+
+/* esercizio 13 */
+
+.ex-13-button:hover {
+    text-decoration: underline;
+}
+
+.ex-13-button:hover .ex-13-top-white {
+    animation-name: move-top-13;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+@keyframes move-top-13 {
+    0% {
+        top: -10px;
+        left: 10%;
+    }
+    20% {
+        top: -10px;
+        left: calc(100% - 30px);
+    }
+    45% {
+        top: 100%;
+        left: calc(100% - 30px);
+    }
+    70% {
+        top: 100%;
+        left: -30px;
+    }
+    95% {
+        left: -30px;
+        top: -10px;
+    }
+    100% {
+        top: -10px;
+        left: 10%;
+    }
+}
+
+.ex-13-button:hover .ex-13-bottom-white {
+    animation-name: move-bottom-13;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+}
+
+@keyframes move-bottom-13 {
+    0% {
+        bottom: -10px;
+        right: 20%;
+    }
+    15% {
+        bottom: -10px;
+        right: calc(100% - 30px);
+    }
+    40% {
+        bottom: calc(100% - 10px);
+        right: calc(100% - 30px);
+    }
+    65% {
+        bottom: calc(100% - 10px);
+        right: -30px;
+    }
+    90% {
+        bottom: -10px;
+        right: -30px;
+    }
+    100% {
+        bottom: -10px;
+        right: 20%;
     }
 }
